@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function CreateArea(props) {
   const [MainNote, setMainNote] = useState({
-    Inputtitle: "",
-    Inputcontent: "",
+    inputtitle: "",
+    inputcontent: "",
   });
 
   function handlechange(event) {
@@ -13,7 +13,7 @@ function CreateArea(props) {
 
   function Submit(event) {
     props.onAdd(MainNote);
-    setMainNote({ Inputtitle: "", Inputcontent: "" });
+    setMainNote({ inputtitle: "", inputcontent: "" });
     event.preventDefault();
   }
 
@@ -23,14 +23,14 @@ function CreateArea(props) {
         <input
           name="title"
           onChange={handlechange}
-          value={MainNote.Inputtitle}
+          value={MainNote.inputtitle}
           placeholder="Title"
           type="text"
         />
         <textarea
           name="content"
           onChange={handlechange}
-          value={MainNote.Inputcontent}
+          value={MainNote.inputcontent}
           placeholder="Take a note..."
           rows="3"
         />
